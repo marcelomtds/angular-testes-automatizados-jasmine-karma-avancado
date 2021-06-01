@@ -30,6 +30,7 @@ export class PhotoFrameComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.unsubscribe))
       .subscribe(() => {
         this.liked.emit();
+        this.likes++;
       });
   }
 
